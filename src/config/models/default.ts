@@ -14,16 +14,24 @@ export const qwen38bModel: Model = {
   group: 'Qwen'
 }
 
+export const DeepseekV3: Model = {
+  id: 'deepseek-v3',
+  name: 'DeepSeek-V3',
+  provider: 'new-api',
+  group: 'Deepseek-AI',
+  endpoint_type: 'openai'
+}
+
 export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> = {
   defaultModel: [
     // Default assistant model
-    glm45FlashModel,
+    DeepseekV3,
     // Default topic naming model
-    qwen38bModel,
+    DeepseekV3,
     // Default translation model
-    glm45FlashModel,
+    DeepseekV3,
     // Default quick assistant model
-    glm45FlashModel
+    DeepseekV3
   ],
   cherryin: [],
   cherryai: [
@@ -1776,7 +1784,31 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       group: 'google'
     }
   ],
-  'new-api': [],
+  'new-api': [
+    { id: 'deepseek-r1', provider: 'new-api', name: 'deepseek-r1', group: 'Deepseek-AI', endpoint_type: 'openai' },
+    { id: 'deepseek-v3', provider: 'new-api', name: 'deepseek-v3', group: 'Deepseek-AI', endpoint_type: 'openai' },
+    { id: 'deepseek-v3.1', provider: 'new-api', name: 'deepseek-v3.1', group: 'Deepseek-AI', endpoint_type: 'openai' },
+    { id: 'deepseek-r1-all', provider: 'new-api', name: 'deepseek-r1-all', group: 'Deepseek-AI', endpoint_type: 'openai'},
+    { id: 'deepseek-vision', provider: 'new-api', name: 'deepseek-vision', group: 'Deepseek-AI', endpoint_type: 'openai'},
+    { id: 'qwen-chat', provider: 'new-api', name: 'qwen-chat', group: 'China', endpoint_type: 'openai' },
+    { id: 'QwQ-32B', provider: 'new-api', name: 'qwen-math', group: 'China', endpoint_type: 'openai' },
+    { id: 'QwQ-72B', provider: 'new-api', name: 'qwen-math', group: 'China', endpoint_type: 'openai' },
+    { id: 'gpt-3.5-turbo', provider: 'new-api', name: ' gpt-3.5-turbo', group: 'Openai', endpoint_type: 'openai' },
+    { id: 'gpt-4', provider: 'new-api', name: ' GPT-4', group: 'Openai', endpoint_type: 'openai' },
+    { id: 'gpt-4-vision-preview', provider: 'new-api', name: ' GPT-4-vision-preview', group: 'Openai', endpoint_type: 'openai'},
+    { id: 'gpt-4-all', provider: 'new-api', name: 'GPT-4-all', group: 'Openai_Plus', endpoint_type: 'openai' },
+    { id: 'gpt-4o', provider: 'new-api', name: ' GPT-4o', group: 'GPT 4o', endpoint_type: 'openai' },
+    { id: 'gpt-4o-all', provider: 'new-api', name: 'gpt-4o-all', group: 'Openai_Plus', endpoint_type: 'openai' },
+    { id: 'gpt-4o-image', provider: 'new-api', name: 'gpt-4o-image', group: 'Openai_Plus', endpoint_type: 'openai' },
+    { id: 'gpt-4o-mini', provider: 'new-api', name: 'GPT-4o-mini', group: 'GPT 4o', endpoint_type: 'openai' },
+    { id: 'gpt-5', provider: 'new-api', name: ' GPT-5', group: 'GPT-5', endpoint_type: 'openai' },
+    { id: 'gpt-5-mini', provider: 'new-api', name: ' gpt-5-mini', group: 'GPT-5', endpoint_type: 'openai' },
+    { id: 'gpt-5-nano', provider: 'new-api', name: ' gpt-5-nano', group: 'GPT-5', endpoint_type: 'openai' },
+    { id: 'gpt-5-thinking', provider: 'new-api', name: ' gpt-5-thinking', group: 'GPT-5', endpoint_type: 'openai' },
+    { id: 'gpt-5-all', provider: 'new-api', name: ' GPT-5-all', group: 'Openai_Plus', endpoint_type: 'openai' },
+    { id: 'o1-mini', provider: 'new-api', name: ' o1-mini', group: 'o1', endpoint_type: 'openai' },
+    { id: 'o1-preview', provider: 'new-api', name: ' o1-preview', group: 'o1', endpoint_type: 'openai' }
+  ],
   'aws-bedrock': [],
   poe: [
     {

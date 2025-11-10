@@ -103,7 +103,7 @@ export default function CustomDrawerContent(props: DrawerContentComponentProps) 
         <PressableRow className="items-center gap-2.5" onPress={handleNavigatePersonalScreen}>
           <Image
             className="h-12 w-12 rounded-full"
-            source={avatar ? { uri: avatar } : require('@/assets/images/favicon.png')}
+            source={avatar ? { uri: avatar } : require('@/assets/images/user.png')}
           />
           <Text className="text-base">{userName || t('common.cherry_studio')}</Text>
         </PressableRow>

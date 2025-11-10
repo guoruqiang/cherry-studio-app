@@ -96,7 +96,7 @@
       },
       "think": "正在思考 {{seconds}} 秒",
       "think_expand": "点击看穿我的心思",
-      "title": "欢迎使用 Cherry Studio!",
+      "title": "欢迎使用 Nwafu Cherry Studio!",
       "topics": {
         "list": "列表",
         "search": {
@@ -105,6 +105,20 @@
         "title": "话题"
       },
       "welcome": "我是您的生产力 AI 助手。您可以创建助手、管理模型等。"
+    },
+    "api_key_check": {
+      "configure": "立即配置",
+      "later": "稍后再说",
+      "message": "您需要配置 API 密钥才能使用 AI 功能。是否现在配置？",
+      "title": "需要填入 API 密钥（令牌）"
+    },
+    "api_key_setup": {
+      "clipboard_detected": "已从剪贴板自动填入 API 密钥",
+      "description": "为了使用 AI 功能，您需要配置 API 密钥。请在下方输入您的 API 密钥（令牌）。",
+      "go_to_settings": "前往设置页面",
+      "save": "保存",
+      "skip": "稍后配置",
+      "title": "填入您的 API 密钥（令牌）"
     },
     "common": {
       "added": "已添加",
@@ -426,7 +440,7 @@
       "mistral": "Mistral",
       "modelscope": "ModelScope 魔搭",
       "moonshot": "月之暗面",
-      "new-api": "New API",
+      "new-api": "西农er’s GPT",
       "nvidia": "英伟达",
       "o3": "O3",
       "ocoolai": "ocoolAI",

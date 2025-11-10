@@ -96,7 +96,7 @@
       },
       "think": "思考中，{{seconds}}秒",
       "think_expand": "點擊讀懂我的心",
-      "title": "歡迎使用 Cherry Studio!",
+      "title": "歡迎使用 Nwafu Cherry Studio!",
       "topics": {
         "list": "清單",
         "search": {
@@ -426,7 +426,7 @@
       "mistral": "Mistral",
       "modelscope": "ModelScope 魔搭",
       "moonshot": "月之暗面",
-      "new-api": "New API",
+      "new-api": "Nwafu’s GPT",
       "nvidia": "輝達",
       "o3": "O3",
       "ocoolai": "ocoolAI",

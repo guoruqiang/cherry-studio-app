@@ -15,7 +15,12 @@ import { getModelUniqId } from '@/utils/model'
 
 const logger = loggerService.withContext('Message Input')
 
-export const useMessageInputLogic = (topic: Topic, assistant: Assistant) => {
+// 从外部传入 checkApiKey 函数，确保使用同一个 hook 实例
+export const useMessageInputLogic = (
+  topic: Topic,
+  assistant: Assistant,
+  checkApiKey: () => Promise<boolean>
+) => {
   const [text, setText] = useState('')
   const [files, setFiles] = useState<FileMetadata[]>([])
   const [mentions, setMentions] = useState<Model[]>([])
@@ -55,6 +60,14 @@ export const useMessageInputLogic = (topic: Topic, assistant: Assistant) => {
 
   const sendMessage = async () => {
     if (isEmpty(text.trim())) {
+      return
+    }
+
+    // Check API key before sending message
+    // 如果 API key 为空，会弹出配置对话框并阻止发送
+    const hasApiKey = await checkApiKey()
+    if (!hasApiKey) {
+      // API key 未配置，已弹出配置对话框，阻止发送
       return
     }
 

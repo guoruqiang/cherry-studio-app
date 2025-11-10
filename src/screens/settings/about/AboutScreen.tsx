@@ -45,7 +45,7 @@ export default function AboutScreen() {
           {/* Logo and Description */}
           <Group>
             <Row className="gap-4">
-              <Image className="h-[70px] w-[70px] rounded-[41px]" source={require('@/assets/images/favicon.png')} />
+              <Image className="h-[70px] w-[70px] rounded-[41px]" source={require('@/assets/images/user.png')} />
               <YStack className="flex-1 gap-[5px] py-1">
                 <Text className="text-[22px] font-bold">{t('common.cherry_studio')}</Text>
                 <Text className="text-text-secondary text-sm" numberOfLines={0}>
@@ -59,7 +59,18 @@ export default function AboutScreen() {
           </Group>
 
           <Group>
-            <PressableRow
+            <YStack className="gap-4 px-4 py-6">
+              <YStack className="items-center gap-2">
+                <Text className="text-text-primary text-lg font-bold text-center">
+                  版本说明
+                </Text>
+                <XStack className="h-px w-12 bg-border" />
+              </YStack>
+              <Text className="text-text-secondary text-sm leading-7 text-center px-2">
+                本版本为专为适配西农er's GPT的内部版本。如需使用官方原版Cherry Studio App，请自行搜索下载。
+              </Text>
+            </YStack>
+            {/* <PressableRow
               onPress={async () => await openLink('https://github.com/CherryHQ/cherry-studio-app/releases/')}>
               <XStack className="items-center gap-[10px]">
                 <Rss size={20} />
@@ -95,7 +106,7 @@ export default function AboutScreen() {
                 <Text>{t('settings.about.contact.title')}</Text>
               </XStack>
               <ArrowUpRight size={16} />
-            </PressableRow>
+            </PressableRow> */}
           </Group>
         </YStack>
       </Container>

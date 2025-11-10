@@ -6,6 +6,7 @@ import { Platform, View } from 'react-native'
 import TextField from '@/componentsV2/base/TextField'
 import XStack from '@/componentsV2/layout/XStack'
 import YStack from '@/componentsV2/layout/YStack'
+import { useApiKeyCheck } from '@/hooks/useApiKeyCheck'
 import { useBottom } from '@/hooks/useBottom'
 import type { Assistant, Topic } from '@/types/assistant'
 
@@ -28,8 +29,9 @@ interface MessageInputProps {
 export const MessageInput: React.FC<MessageInputProps> = ({ topic, assistant, updateAssistant }) => {
   const { t } = useTranslation()
   const bottomPad = useBottom()
+  const { checkApiKey, ApiKeySetupSheet } = useApiKeyCheck()
   const { text, setText, files, setFiles, mentions, setMentions, isReasoning, sendMessage, onPause } =
-    useMessageInputLogic(topic, assistant)
+    useMessageInputLogic(topic, assistant, checkApiKey)
 
   return (
     <View
@@ -104,6 +106,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({ topic, assistant, up
           </XStack>
         </XStack>
       </YStack>
+      {ApiKeySetupSheet}
     </View>
   )
 }

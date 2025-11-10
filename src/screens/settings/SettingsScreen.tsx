@@ -160,7 +160,7 @@ function SettingItem({ title, screen, icon, specificScreen }: SettingItemProps) 
     if (typeof icon === 'string') {
       return (
         <Image
-          source={icon ? { uri: icon } : require('@/assets/images/favicon.png')}
+          source={icon ? { uri: icon } : require('@/assets/images/user.png')}
           className="h-10 w-10 rounded-full"
           accessibilityLabel={title}
         />

@@ -841,7 +841,8 @@ export async function getDefaultAssistant(): Promise<Assistant> {
  * Get default model
  */
 export function getDefaultModel() {
-  return SYSTEM_MODELS.cherryai[0]
+  // 使用 defaultModel 数组中的第一个模型（DeepseekV3，使用 new-api provider）
+  return SYSTEM_MODELS.defaultModel[0]
 }
 
 /**

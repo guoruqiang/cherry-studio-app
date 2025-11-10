@@ -96,7 +96,7 @@
       },
       "think": "Думаю {{seconds}} секунд",
       "think_expand": "Нажмите, чтобы прочитать мои мысли",
-      "title": "Добро пожаловать в Cherry Studio!",
+      "title": "Добро пожаловать в Nwafu Cherry Studio!",
       "topics": {
         "list": "Список",
         "search": {
@@ -426,7 +426,7 @@
       "mistral": "Mistral",
       "modelscope": "ModelScope",
       "moonshot": "Moonshot",
-      "new-api": "New API",
+      "new-api": "Nwafu’s GPT",
       "nvidia": "Nvidia",
       "o3": "O3",
       "ocoolai": "ocoolAI",
