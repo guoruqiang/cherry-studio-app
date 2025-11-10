@@ -9,6 +9,7 @@ export default {
   expo: {
     name: 'Cherry Studio',
     slug: 'cherry-studio',
+    owner: 'vynaris',
     version: appVersion,
     // orientation: 'portrait', 锁定竖屏
     orientation: 'default',
@@ -18,7 +19,7 @@ export default {
     newArchEnabled: true,
     entryPoint: './src/app.js',
     updates: {
-      url: 'https://u.expo.dev/80096eaf-3ad0-4b87-a466-15f04da1bacc'
+      url: 'https://u.expo.dev/c95fdc28-6a06-42c4-a37b-f10701dbe34b'
     },
     runtimeVersion: {
       policy: 'appVersion'
@@ -162,7 +163,7 @@ export default {
     },
     extra: {
       eas: {
-        projectId: '80096eaf-3ad0-4b87-a466-15f04da1bacc'
+        projectId: 'c95fdc28-6a06-42c4-a37b-f10701dbe34b'
       },
       appVersion
     }

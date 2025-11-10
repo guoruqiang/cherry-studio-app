@@ -225,11 +225,11 @@ export const ApiKeySetupSheet = forwardRef<BottomSheetModal, ApiKeySetupSheetPro
                 </XStack>
               )}
 
-              {apiKeyWebsite && (
-                <XStack className="justify-end px-3">
-                  <ExternalLink href={apiKeyWebsite} content={t('settings.provider.api_key.get')} />
-                </XStack>
-              )}
+              {/* 获取 API 密钥链接 */}
+              <XStack className="justify-between px-3">
+                <Text className="text-xs opacity-40">{t('settings.provider.api_key.tip')}</Text>
+                <ExternalLink href="https://gpt.nwafu-ai.cn/console/token" content={t('api_key_setup.get_api_key')} />
+              </XStack>
             </YStack>
 
             {/* API Host Input */}

@@ -115,6 +115,7 @@
     "api_key_setup": {
       "clipboard_detected": "已从剪贴板自动填入 API 密钥",
       "description": "为了使用 AI 功能，您需要配置 API 密钥。请在下方输入您的 API 密钥（令牌）。",
+      "get_api_key": "获取 API 密钥（令牌）",
       "go_to_settings": "前往设置页面",
       "save": "保存",
       "skip": "稍后配置",
